@@ -93,9 +93,9 @@ window.addEventListener("DOMContentLoaded", (ev) => {
     
     ShareBtn.addEventListener("click", (ev) => {
         ev.preventDefault();
-        let encodedQuote = encodeURIComponent(QUOTE_TEXT);
+        let encodedQuote = encodeURIComponent(`$ Hey i just found out this quote: "${QUOTE_TEXT}" by ${QUOTE_AUTHOR} and i hope you like it and brightens your day! `);
         let whatsappURL = `https://api.whatsapp.com/send?text=${encodedQuote}`;
-        window.open(whatsappURL, '_blank');
+        window.open(whatsappURL);
     });
 
 });
