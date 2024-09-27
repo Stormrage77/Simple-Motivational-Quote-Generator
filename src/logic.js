@@ -3,6 +3,7 @@ const mainContainerText = document.getElementById("main-container-text");
 const mainContainerAuthor = document.getElementById("main-container-author");
 const ShareBtn = document.getElementById("Share-Btn");
 const GenerateQuoteBtn = document.getElementById("GenerateQuote-Btn");
+const loader = document.getElementById("loader");
 
 const API_URL = "https://dummyjson.com/quotes";
 const OFFLINE = "offline";
@@ -13,9 +14,22 @@ let QUOTE_TEXT = null;
 let quote = [];
 
 
+function Loading()
+{
+    loader.hidden = false;
+    mainContainer.hidden = true;
+}
+
+function Complete()
+{
+    loader.hidden = true;
+    mainContainer.hidden = false;
+}
+
 async function RetrieveQuotes()
 {
     try {
+        Loading();
         var response = await fetch(API_URL);
         quote = await response.json();
         SelectQuote(ONLINE);
@@ -52,6 +66,7 @@ function SelectQuote(status) {
 
                 mainContainerText.textContent = QUOTE_TEXT;
                 mainContainerAuthor.textContent = QUOTE_AUTHOR;
+                Complete();
                 break;
         
             case "offline":
@@ -65,6 +80,7 @@ function SelectQuote(status) {
                 }
                 mainContainerText.textContent = QUOTE_TEXT;
                 mainContainerAuthor.textContent = QUOTE_AUTHOR;
+                Complete();
                 break
         
             default:
