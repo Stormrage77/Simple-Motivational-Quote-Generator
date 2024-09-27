@@ -40,7 +40,7 @@ html{
    
    .main-container-text-long
    {
-       font-size: 1.5rem;
+       font-size: 1.3rem;
    }
    
    .main-container-author
@@ -103,7 +103,7 @@ html{
        }
    
        button{
-           font-size: 1rem;
+           font-size: 0.8rem;
        }
    }
    
