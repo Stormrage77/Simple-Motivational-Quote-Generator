@@ -12,4 +12,4 @@ A simple motivational quote generator made using Vanilla Js / HTML / CSS3
 
 # Demo
 
-You can test the demo [HERE](https://stormrage77.github.io/Simple-Motivational-Quo)
+You can test the demo [HERE](https://stormrage77.github.io/Simple-Motivational-Quote-Generator/)
