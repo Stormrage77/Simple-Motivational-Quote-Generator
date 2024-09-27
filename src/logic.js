@@ -85,10 +85,6 @@ window.addEventListener("DOMContentLoaded", (ev) => {
     GenerateQuoteBtn.addEventListener("click", (ev) => {
         ev.preventDefault();
         RetrieveQuotes();
-        console.log(QUOTE_TEXT);
-        console.log(QUOTE_AUTHOR);
-        mainContainerText.textContent = QUOTE_TEXT;
-        mainContainerAuthor.textContent = QUOTE_AUTHOR;
     });
     
     ShareBtn.addEventListener("click", (ev) => {
